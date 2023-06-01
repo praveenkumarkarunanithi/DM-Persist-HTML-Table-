@@ -76,7 +76,7 @@ let DM2 = new ej.data.DataManager({
   ignoreOnPersist: ["onSelect"],
 });
 let result2 = DM2.executeLocal(new ej.data.Query().take(10));
-result2.forEach((data) => {
+result2.result.forEach((data) => {
   table2.appendChild(compiledFunction2(data)[0]);
 });
 
