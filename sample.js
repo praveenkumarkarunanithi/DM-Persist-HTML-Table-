@@ -85,7 +85,7 @@ let DM2 = new ej.data.DataManager({
 });
 showSpinner2();
 let result2 = DM2.executeLocal(new ej.data.Query().take(10));
-result2.forEach((data) => {
+result2.result.forEach((data) => {
   table2.appendChild(compiledFunction2(data)[0]);
 });
 hideSpinner2();
@@ -122,7 +122,7 @@ btnQuery32.addEventListener("click", () => {
   showSpinner2();
   result2 = DM2.executeLocal(query2);
   table2.innerHTML = table2.querySelector("tr:first-child").outerHTML; // Clear the existing table2 content
-  result2.result.forEach((data) => {
+  result2.forEach((data) => {
     table2.appendChild(compiledFunction2(data)[0]);
   });
   hideSpinner2();
